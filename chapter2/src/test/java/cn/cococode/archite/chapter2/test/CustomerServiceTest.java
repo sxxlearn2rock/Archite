@@ -33,6 +33,12 @@ public class CustomerServiceTest {
         for (Customer customer : customerList){
             System.out.println(customer);
         }
+        customerService.deleteCustomer(1);
+        customerList = customerService.getCustomerList();
+        assertEquals(1, customerList.size());
+        for (Customer customer : customerList){
+            System.out.println(customer);
+        }
     }
 
     @Test
